@@ -1,0 +1,33 @@
+{
+  "import a module": {
+    "prefix": "im",
+    "body": ["import { $1 } from '$2';"]
+  },
+  "vue=script-setup": {
+    "prefix": "script",
+    "body": [
+      "<script setup lang='ts'>",
+      "${1}",
+      "</script>",
+      "<template>",
+      "${2}",
+      "</template>"
+    ]
+  },
+  "vue-template-ref": {
+    "prefix": "tref",
+    "body": ["const ${1:el} = shallowRef<HTMLDivElement>()"]
+  },
+  "vue-ref": {
+    "prefix": "ref",
+    "body": ["const ${1} = ref(${2})"]
+  },
+  "vue-computed": {
+    "prefix": "com",
+    "body": ["computed(() => { $1 })"]
+  },
+  "api": {
+    "prefix": "api",
+    "body": ["export default defineEventHandler(async () => {", "$1", "})"]
+  }
+}
